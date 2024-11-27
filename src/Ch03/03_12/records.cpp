@@ -25,8 +25,6 @@ std::string Course::get_name() const{
 int Course::get_credits() const{
     return credits;
 }
-
-
 Grade::Grade(int sid, int cid, char grd){
     student_id = sid;
     course_id = cid;

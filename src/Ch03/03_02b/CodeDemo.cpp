@@ -7,14 +7,31 @@
 
 enum class cow_purpose {dairy, meat, hide, pet};
 
-struct cow{
+class cow{
+public:
+    cow(std::string name_i, int age_i, cow_purpose purpose_i){
+        name = name_i;
+        age = age_i;
+        purpose = purpose_i;
+    }
+    std::string get_name() const{
+        return name;
+    }
+    int get_age() const{
+        return age;
+    }
+    cow_purpose get_purpose() const{
+        return purpose;
+    }
+
+private:
     std::string name;
     int age;
     cow_purpose purpose;
 };
 
+//Won't compile because I need to update the main function
 int main(){
-    cow my_cow;
     my_cow.age = 5;
     my_cow.name = "Betsy";
     my_cow.purpose = cow_purpose::dairy;

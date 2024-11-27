@@ -11,6 +11,7 @@ int main(){
     std::string str;
     int number;
     char letter;
+    
 
     inFile.open("people.txt");
     if (inFile.fail())
